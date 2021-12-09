@@ -10,11 +10,21 @@
 #   [
 #     {
 #       name: '田中',
+#       email: 'tanaka@gmail.com',
 #       age: 23
 #     },
 #     {
 #       name: '佐藤',
+#       email: 'satou@gmail.com',
 #       age: 32
 #     }
 #   ]
 # )
+
+30.times do
+  User.create({
+    name: Faker::Name.first_name,
+    email: Faker::Internet.free_email,
+    age: rand(18..36)
+  })
+end

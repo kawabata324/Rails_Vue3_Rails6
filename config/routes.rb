@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  get 'users', to: 'users#index'
+  get 'users/index'
+  get 'users/show'
+  resources :users, only: [:index, :show]
 end
