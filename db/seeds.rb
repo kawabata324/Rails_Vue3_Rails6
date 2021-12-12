@@ -21,10 +21,17 @@
 #   ]
 # )
 
-30.times do
-  User.create({
-    name: Faker::Name.first_name,
-    email: Faker::Internet.free_email,
-    age: rand(18..36)
-  })
+# 30.times do
+#   User.create({
+#     name: Faker::Name.first_name,
+#     email: Faker::Internet.free_email,
+#     age: rand(18..36)
+#   })
+# end
+
+5.times do
+  Memo.create(
+    title: Faker::Lorem.word,
+    description: Faker::Lorem.sentence
+  )
 end
